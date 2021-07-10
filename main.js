@@ -1,3 +1,16 @@
+var opacity4 = 0;
+
+function MyFadeFunction4() {
+
+
+    if (opacity4 < 1) {
+        opacity4 += .1;
+        setTimeout(function() { MyFadeFunction4() }, 100);
+    }
+    document.getElementById('text4').style.opacity = opacity4;
+}
+
+
 var opacity3 = 0;
 
 function MyFadeFunction3() {
@@ -53,5 +66,9 @@ function gifTime() {
 
     window.setTimeout(function() {
         MyFadeFunction3()
+    }, 700);
+
+    window.setTimeout(function() {
+        MyFadeFunction4()
     }, 700);
 }
